@@ -51,7 +51,7 @@ sudo rm -rf /usr/local/lib/bci && sudo git clone --depth 1 https://github.com/to
 
 ## Arguments
 
-- `SEARCH_TERM`: _the 1<sup>st</sup> argument is the_ SEARCH TERM _that will be looked inside all the files available_;
+- `SEARCH_TERM`: _the 1<sup>st</sup> argument is the_ SEARCH TERM _that will be searched inside all the files available_;
 - `SEARCH_DIRECTORY`: _the 2<sup>nd</sup> argument is the_ SEARCH DIRECTORY _where the search will take place_.
 
 ---
