@@ -30,7 +30,7 @@
 ### *__Install__*:
 
 ```shell
-sudo git clone --depth 1 https://github.com/tomasfn87/bci /usr/local/lib/bci && sudo rm -rf /usr/local/lib/bci/{misc,README.md,.git} && sudo ln -rs /usr/local/lib/bci/bci.sh /usr/local/bin/bci && sudo ln -rs /usr/local/lib/bci/gbci.sh /usr/local/bin/gbci && echo "\nUse commands bci and gbci to search through file names and file content in a directory."
+sudo git clone --depth 1 --no-checkout https://github.com/tomasfn87/bci /usr/local/lib/bci && pushd /usr/local/lib/bci && sudo git sparse-checkout set {g,}bci.sh && sudo git checkout && sudo ln -rs /usr/local/lib/bci/bci.sh /usr/local/bin/bci && sudo ln -rs /usr/local/lib/bci/gbci.sh /usr/local/bin/gbci && popd && echo "\nUse commands bci and gbci to search through file names and file content in a directory."
 ```
 
 ### *__Uninstall__*:
@@ -42,7 +42,7 @@ sudo rm -rf /usr/local/{lib/bci,bin/{g,}bci}
 ### *__Update__*:
 
 ```shell
-sudo rm -rf /usr/local/lib/bci && sudo git clone --depth 1 https://github.com/tomasfn87/bci /usr/local/lib/bci && sudo rm -rf /usr/local/lib/bci/{misc,README.md,.git} && echo "\nbci and gbci were updated to the latest version."
+sudo rm -rf /usr/local/lib/bci && sudo git clone --depth 1 --no-checkout https://github.com/tomasfn87/bci /usr/local/lib/bci && pushd /usr/local/lib/bci && sudo git sparse-checkout set {g,}bci.sh && sudo git checkout && popd && echo "\nbci and gbci were updated to the latest version."
 ```
 
 ---
